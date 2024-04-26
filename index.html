@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=League+Spartan">
+
+    <title>Frontend Mentor | Social proof section</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        ;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      body{
+        background-image: url(images/bg-pattern-bottom-desktop.svg), url(images/bg-pattern-top-desktop.svg);
+        background-position: right bottom, left top;
+        background-repeat: no-repeat, no-repeat;
+        margin: 0;
+        padding: 0;
+        /* background-color: rgb(228, 24, 24); */
+        font-size: 15px;
+        font-family: League Spartan;
+        
+      
+      }
+      img{
+      
+        border-radius: 100%;
+        max-width: 100%;
+      }
+      p{
+        padding: 0;
+        margin: 0;
+      }
+      .main-container{
+        /* background-color: aqua; */
+        /* border: solid 2px brown; */
+        height: 100vh;
+        display: grid;
+        place-items: center;
+
+      }
+      .main-inner-container{
+        /* background-image: url(images/bg-pattern-bottom-desktop.svg), url(images/bg-pattern-top-desktop.svg); */
+        /* border: solid 2px pink; */
+        height: 100%;
+        width: 100%;
+        display: grid;
+        place-items: center;
+      }
+      .main-inner-content{
+        /* border: solid 2px green; */
+        width: 80%;
+        height: 80%;
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+        
+      }
+      .container-one{
+        /* background-color: gray; */
+        /* border: solid 2px blue; */
+        display: grid;
+        grid-template-columns: 40% 60%;
+        color:  hsl(300, 43%, 22%);
+
+      }
+
+  
+      .container-one1 :first-child{
+        font-size: 40px;
+        font-weight: 700;
+        width: 90%;
+      }
+      .container-one1 :last-child{
+        font-weight: 400;
+        margin-top: 5%;
+      }
+      .container-one2{
+        /* border: solid 2px gray; */
+        /* background-color: orange; */
+        position: relative;
+        color:  hsl(300, 43%, 22%);
+        font-weight: 600;
+        font-size: 12px;
+        margin-top: 3%;
+
+      }
+      .star-rating{
+        background-color: hsl(300, 24%, 96%);
+        display: grid;
+        grid-template-columns: 40% 60%;
+        align-items: center;
+        width: 65%;
+        padding: 1.5em;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      .container-one2-1{
+        margin-left: 25%;
+      }
+      .container-one2-2{
+        margin-top: 3%;
+        margin-left: 30%;
+        
+      }
+      .container-one2-3{
+        margin-top: 3%;
+        margin-left: 35%;
+      }
+      
+    
+      .container-two{
+        /* background-color: yellow; */
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 3%;
+        position: relative;
+        top: 0;
+        left: 0;
+            
+         }
+         .bg{
+          background-color:hsl(300, 43%, 22%);
+          border-radius: 5px;
+          
+         }
+         .irene,.ann,.colton{
+          position: relative;
+          height: 80%;
+          box-sizing: border-box;
+          padding: 10%;
+        }
+      
+        .irene{
+          top: 10%;
+        }
+         .ann{
+          top: 20%;
+        
+         }
+
+         .img-box{
+        /* background-color: yellow; */
+        display: grid;
+        grid-template-columns: 20% 75%;
+        grid-gap: 5%;
+        
+         }
+         .para-box{
+          margin-top: 10%;
+          box-sizing: border-box;
+         }
+
+         .white{
+          color: white;
+         }
+
+        .light-grayish{
+          color:hsl(333, 80%, 67%);
+        }
+        .customer-name{
+          display: grid;
+          grid-template-rows: repeat(2,1fr);
+          height: 90%;
+          align-items: center;
+        }
+
+       
+
+      /* Media Quaries */
+      @media only screen and (max-width: 1040px) {
+        /* body{
+          background-color: aqua;
+        } */
+    .main-inner-content{
+      height: 80%;
+    }
+    .star-rating{
+        width: 60%;
+        
+      }
+    
+    .container-two{
+      display: grid;
+      position: static;
+    }
+
+    .irene,.ann,.colton{
+      top: 0%;
+      height: 100%;
+    }
+}
+
+@media only screen and (max-width: 890px) {
+  /* body{
+    background-color: yellow;
+  } */
+    .container-one{
+      grid-template-columns: repeat(2,1fr);
+    }
+    .star-rating{
+        display: block;
+        text-align: center;
+        width: 80%;
+        margin-top: 3;
+        
+      }
+      .star{
+          margin-bottom: 3%;
+      }
+      .container-one2-1,.container-one2-2,.container-one2-3{
+        margin: 0;
+        margin: auto;
+      }
+
+      .star-rating{
+        margin-top: 3%;
+      }
+    }
+
+@media only screen and (max-width: 750px) {
+  /* body{
+    background-color:indianred;
+  } */
+
+    .main-inner-container {
+      height: 100%;
+    }
+    .main-inner-content{
+    display: block; 
+    height: 100%;
+    padding-top: 20%;
+    
+  }
+  .container-one{
+        display: block;
+        text-align: center;
+      }
+    .container-one2{
+      margin-top: 5%;
+      position: static;
+      top: 0;
+      left: 0;
+    }
+
+
+      .star-rating{
+        margin-top: 3%;
+        width: 80%;
+      } 
+
+      .container-two{
+        margin-top: 5%;
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+       grid-template-rows:repeat(2,1fr);
+       
+      }
+
+
+        
+
+  }
+        @media only screen and (max-width: 550px) {
+          /* body{
+            background-color:RED;
+          } */
+
+    .star-rating{
+        margin-top: 3%;
+        width: 100%;
+      }
+    .container-two{
+      display: block;
+      margin-top: 10%;
+    }
+    .irene,.ann,.colton{
+          margin-top: 5%;
+        }
+  
+  }
+
+      
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+
+        <div class="main-inner-container">
+
+          <div class="main-inner-content">
+
+            <div class="container-one">
+                    <div class="container-one1">
+                        <p>10,000+ of our users love our products.</p>
+                        <p>We only provide great products combined with excellent customer service.
+                          See what our satisfied customers are saying about our services.</p>
+                      
+                    </div>
+
+                    <div class="container-one2">
+                        <div class="container-one2-1 star-rating">
+                                <div class="star">
+                                  ⭐⭐⭐⭐⭐
+                                </div>
+                                <div>
+                                  <p>Rated 5 Stars in Reviews </p>
+                                </div>
+                        </div>
+
+                        <div class="container-one2-2 star-rating">
+                                <div class="star">
+                                  ⭐⭐⭐⭐⭐
+                                </div>
+                                <div>
+                                  <p>Rated 5 Stars in Report Guru </p>
+                                </div>
+                        </div>
+
+                  <div class="container-one2-3 star-rating">
+                                <div class="star">
+                                  ⭐⭐⭐⭐⭐
+                                </div>
+                                <div>
+                                  <p>Rated 5 Stars in BestTech</p>
+                                </div>
+                   </div>
+                      
+                      
+                </div>
+            </div>
+    
+            <div class="container-two customer-review">
+                    <div class="container-two1 bg colton">
+                      <div class="element1 img-box">
+                            <div>
+                               <img src="images/image-colton.jpg" alt="" >
+                            </div>
+
+                            <div class="customer-name">
+                                <p class="white">Colton Smith</p>
+                                <p class="light-grayish">Verified Buyer</p>
+                            </div>
+
+                      </div>
+
+                      
+                      <div class="element2 para-box">
+                        <p class="white">
+                          "We needed the same printed design as the one we had ordered a week prior.
+                          Not only did they find the original order, but we also received it in time.
+                          Excellent!"</p>
+                      </div>
+                        
+                    </div>
+
+
+                    <div class="container-two2 bg irene">
+                      <div class="element1 img-box">
+                            <div>
+                               <img src="images/image-irene.jpg" alt="" >
+                            </div>
+
+                            <div class="customer-name">
+                                <p class="white">Irene Roberts</p>
+                                <p class="light-grayish">Verified Buyer</p>
+                            </div>
+
+                      </div>
+
+                      
+                      <div class="element2 para-box">
+                        <p class="white">
+                          "Customer service is always excellent and very quick turn around. Completely
+                          delighted with the simplicity of the purchase and the speed of delivery."
+                        </p>
+                      </div>
+                        
+                    </div>
+
+                    <div class="container-two3 bg ann">
+                      <div class="element1 img-box">
+                            <div>
+                               <img src="images/image-anne.jpg" alt="" >
+                            </div>
+
+                            <div class="customer-name">
+                                <p class="white">Anne Wallace</p>
+                                <p class="light-grayish">Verified Buyer</p>
+                            </div>
+
+                      </div>
+
+                      
+                      <div class="element2 para-box">
+                        <p class="white"> "Put an order with this company and can only praise them for the very high
+                          standard. Will definitely use them again and recommend them to everyone!" 
+                        </p>
+                      </div>
+                        
+                    </div>
+
+                    
+
+                    
+            </div>
+
+
+                    
+                  
+          </div>
+
+        
+
+        </div>
+
+    </div>
+  
+    <!-- 10,000+ of our users love our products.
+
+    We only provide great products combined with excellent customer service.
+    See what our satisfied customers are saying about our services.
+    
+    Rated 5 Stars in Reviews
+    Rated 5 Stars in Report Guru
+    Rated 5 Stars in BestTech
+    
+    Colton Smith 
+    Verified Buyer
+    "We needed the same printed design as the one we had ordered a week prior.
+    Not only did they find the original order, but we also received it in time.
+    Excellent!"
+    
+    Irene Roberts 
+    Verified Buyer
+    "Customer service is always excellent and very quick turn around. Completely
+    delighted with the simplicity of the purchase and the speed of delivery."
+    
+    Anne Wallace 
+    Verified Buyer
+    "Put an order with this company and can only praise them for the very high
+    standard. Will definitely use them again and recommend them to everyone!" -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Ezeali Emmanuel Chukwu</a>.
+    </div>
+  </body>
+</html>
